@@ -1,0 +1,22 @@
+<h2>Lista de Productos</h2>
+
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Código</th>
+      <th>Precio</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.codigo }}</td>
+      <td>{{ p.precio }}</td>
+      <td>{{ p.stock }}</td>
+    </tr>
+  </tbody>
+  <pre>{{ productos | json }}</pre>
+</table>

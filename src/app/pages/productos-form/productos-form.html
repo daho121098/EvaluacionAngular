@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>{{ id ? 'Editar Producto' : 'Crear Producto' }}</h2>
+
+  <form (ngSubmit)="guardar()">
+    <label>Código</label>
+    <input [(ngModel)]="modelo.codigo" name="codigo" required />
+
+    <label>Nombre</label>
+    <input [(ngModel)]="modelo.nombre" name="nombre" required />
+
+    <label>Descripción</label>
+    <textarea [(ngModel)]="modelo.descripcion" name="descripcion"></textarea>
+
+    <label>Precio</label>
+    <input type="number" [(ngModel)]="modelo.precio" name="precio" required />
+
+    <label>Stock</label>
+    <input type="number" [(ngModel)]="modelo.stock" name="stock" required />
+
+    <button type="submit">Guardar</button>
+    <button routerLink="/productos">Cancelar</button>
+  </form>
+</div>
